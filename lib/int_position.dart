@@ -8,6 +8,7 @@ class IntPosition {
   static final RegExp _matcher =
       RegExp('IntPosition\\(x\\: (\\-?\\d*), y\\: (\\-?\\d*)\\)');
 
+  /// x and y coordinates of this point.
   final int x, y;
 
   const IntPosition(this.x, this.y);
