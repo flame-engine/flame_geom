@@ -27,13 +27,15 @@ void main() {
     LineSegment inside = LineSegment.fromPoints(Position(0, 0), Position(1, 1));
     expect(circle.containsLineSegment(inside), true);
 
-    LineSegment outside = LineSegment.fromPoints(Position(0, 3), Position(1, 3));
+    LineSegment outside =
+        LineSegment.fromPoints(Position(0, 3), Position(1, 3));
     expect(circle.containsLineSegment(outside), false);
   });
   test('overlapsLineSegment', () {
     final circle = Circle(Position(0, 0), 2.0);
 
-    LineSegment notLongEnough = LineSegment.fromPoints(Position(0, 0), Position(1, 1));
+    LineSegment notLongEnough =
+        LineSegment.fromPoints(Position(0, 0), Position(1, 1));
     expect(circle.overlapsLineSegment(notLongEnough), false);
 
     LineSegment longer = LineSegment.fromPoints(Position(0, 0), Position(3, 3));
@@ -42,7 +44,8 @@ void main() {
   test('intesectsLine', () {
     final circle = Circle(Position(0, 0), 2.0);
 
-    LineSegment vertical = LineSegment.fromPoints(Position(0, 0), Position(0, 1));
+    LineSegment vertical =
+        LineSegment.fromPoints(Position(0, 0), Position(0, 1));
     final points = circle.intesectsLine(vertical);
     expect(points.any((e) => e.x == 0.0 && e.y == 2.0), true);
     expect(points.any((e) => e.x == 0.0 && e.y == -2.0), true);

@@ -20,7 +20,8 @@ void main() {
   });
 
   test('complex overlaps', () {
-    final i1 = IntBounds([IntRect.fromLTWH(0, 0, 1, 1), IntRect.fromLTWH(5, 0, 1, 1)]);
+    final i1 =
+        IntBounds([IntRect.fromLTWH(0, 0, 1, 1), IntRect.fromLTWH(5, 0, 1, 1)]);
     final i2 = IntBounds([IntRect.fromLTWH(-10, -2, 20, 4)]);
     final i3 = IntBounds([IntRect.fromLTWH(3, 0, 1, 1)]);
 

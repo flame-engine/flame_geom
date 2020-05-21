@@ -55,7 +55,7 @@ class Circle {
 
   /// Returns the locus of points in which the provided line intersect this circle.
   /// This considers the line as a line segmented, i.e., limited by its ends.
-  /// 
+  ///
   /// This can return from 0 to 2 points, depending on the circle/line relation and the ends of the segment.
   List<Position> intesectLineSegment(LineSegment line,
       {double epsilon = double.minPositive}) {
@@ -66,7 +66,7 @@ class Circle {
 
   /// Returns the locus of points in which the provided line intersect this circle.
   /// The line is treated as the full line, not a segment.
-  /// 
+  ///
   /// This can be zero (if they don't intersect), one point (if the line is tangent) or two points (if the line is secant).
   List<Position> intesectsLine(LineSegment line,
       {double epsilon = double.minPositive}) {
