@@ -1,0 +1,18 @@
+name: flame_geom_example
+description: Example app for the Flame Geom module.
+version: 0.0.1
+homepage: https://github.com/flame-engine/flame_geom
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flame: ^0.21.0
+  flame_geom:
+    path: ../
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
