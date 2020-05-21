@@ -1,14 +1,19 @@
 # flame_geom
 
-A new Flutter package project.
+Complement Flame with APIs for handling shapes and geometric operations.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+This package makes heavy use of Flame's `Position` class and includes several geometric structures:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+* LineSegment: represents a finite line segment between two points in a 2D Euclidian space (or sometimes the whole line).
+* Circle: represents a circle (or sometimes a circumference) in 2D Euclidian space.
+* Rectangle: represents an axis-aligned rectangle in a 2D Euclidian space.
+* Overlapable: generic interface for shapes that can overlap one another.
+
+If working with integer precision, it might also be useful to take a look at some integer versions of these classes:
+
+* IntPosition: similar to Position but for integers.
+* IntRect: similar to Rectangle but for integers.
+* IntBounds: similar to Overlapple but for integers.
+
