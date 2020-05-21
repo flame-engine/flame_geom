@@ -10,7 +10,5 @@ if ! echo "$result" | grep -q "No issues found!"; then
   exit 1
 fi
 
-flutter test
-
 echo "success"
 exit 0
