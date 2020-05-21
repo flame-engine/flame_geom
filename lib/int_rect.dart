@@ -8,7 +8,6 @@ import 'int_position.dart';
 import 'overlapable.dart';
 import 'rectangle.dart';
 
-///
 /// This is equivalent to the [Rectangle] class, but with Integers.
 ///
 /// All of its coordinates (x, y, width and height) are ints.
