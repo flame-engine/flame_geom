@@ -41,12 +41,12 @@ void main() {
     LineSegment longer = LineSegment.fromPoints(Position(0, 0), Position(3, 3));
     expect(circle.overlapsLineSegment(longer), true);
   });
-  test('intesectsLine', () {
+  test('intersectsLine', () {
     final circle = Circle(Position(0, 0), 2.0);
 
     LineSegment vertical =
         LineSegment.fromPoints(Position(0, 0), Position(0, 1));
-    final points = circle.intesectsLine(vertical);
+    final points = circle.intersectsLine(vertical);
     expect(points.any((e) => e.x == 0.0 && e.y == 2.0), true);
     expect(points.any((e) => e.x == 0.0 && e.y == -2.0), true);
   });

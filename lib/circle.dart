@@ -47,19 +47,19 @@ class Circle {
   /// Returns whether this circle overlaps the provided line segment, i.e., intersects in at least one place.
   /// This considers the line as a line segmented, i.e., limited by its ends.
   bool overlapsLineSegment(LineSegment line) =>
-      intesectLineSegment(line).isNotEmpty;
+      intersectLineSegment(line).isNotEmpty;
 
   /// Returns whether this circle overlaps the provided line, i.e., intersects in at least one place.
   /// The line is treated as the full line, not a segment.
-  bool overlapsLine(LineSegment line) => intesectsLine(line).isNotEmpty;
+  bool overlapsLine(LineSegment line) => intersectsLine(line).isNotEmpty;
 
   /// Returns the locus of points in which the provided line intersect this circle.
   /// This considers the line as a line segmented, i.e., limited by its ends.
   ///
   /// This can return from 0 to 2 points, depending on the circle/line relation and the ends of the segment.
-  List<Position> intesectLineSegment(LineSegment line,
+  List<Position> intersectLineSegment(LineSegment line,
       {double epsilon = double.minPositive}) {
-    return intesectsLine(line, epsilon: epsilon)
+    return intersectsLine(line, epsilon: epsilon)
         .where((e) => line.contains(e))
         .toList();
   }
@@ -68,7 +68,7 @@ class Circle {
   /// The line is treated as the full line, not a segment.
   ///
   /// This can be zero (if they don't intersect), one point (if the line is tangent) or two points (if the line is secant).
-  List<Position> intesectsLine(LineSegment line,
+  List<Position> intersectsLine(LineSegment line,
       {double epsilon = double.minPositive}) {
     final double cx = center.x;
     final double cy = center.y;
