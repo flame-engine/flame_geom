@@ -1,5 +1,7 @@
 # flame_geom
 
+[![Pub](https://img.shields.io/pub/v/flame_geom.svg?style=popout)](https://pub.dartlang.org/packages/flame_geom) ![Test](https://github.com/flame-engine/flame_geom/workflows/Build/badge.svg?branch=master&event=push) [![Discord](https://img.shields.io/discord/509714518008528896.svg)](https://discord.gg/pxrBmy4)
+
 Complement Flame with APIs for handling shapes and geometric operations.
 
 ## Overview
