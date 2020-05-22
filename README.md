@@ -24,5 +24,5 @@ If working with integer precision, it might also be useful to take a look at som
 The example folder contains a playground for you to render a Flame game using shapes computed by Flame Geom.
 
 <p align="center">
-  <img width="460" height="300" src="resources/flame_geom_print.png">
+  <img src="resources/flame_geom_print.png">
 </p>
