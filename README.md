@@ -19,3 +19,10 @@ If working with integer precision, it might also be useful to take a look at som
 * IntRect: similar to Rectangle but for integers.
 * IntBounds: similar to Overlapple but for integers.
 
+## Example
+
+The example folder contains a playground for you to render a Flame game using shapes computed by Flame Geom.
+
+<p align="center">
+  <img width="460" height="300" src="resources/flame_geom_print.png">
+</p>

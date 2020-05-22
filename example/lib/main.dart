@@ -21,7 +21,7 @@ class MyGame extends Game {
   List<Position> points;
 
   MyGame() {
-    unitCircle = Circle(Position(0, 31), 100.0);
+    unitCircle = Circle(Position(10, 30), 100.0);
     rectangle = Rectangle.fromLTWH(-100, -100, 200, 200);
     points = rectangle.sides().expand((e) => unitCircle.intersectLineSegment(e)).toList();
   }
