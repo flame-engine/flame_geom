@@ -1,3 +1,6 @@
+## [0.2.1]
+* Better code formatting
+
 ## [0.2.0]
 * Improves overlapables to include more objects
 * Adds Renderable interface and an easy to use Flame component
