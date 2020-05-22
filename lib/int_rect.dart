@@ -54,19 +54,6 @@ class IntRect with Overlapable, Renderable {
   int get width => w;
   int get height => h;
 
-  @override
-  bool overlaps(Overlapable other) {
-    if (other is IntRect) {
-      return intersection(other).isNotEmpty;
-    } else if (other is IntBounds) {
-      return other.overlaps(this);
-    } else if (other is CertainOverlap) {
-      return true;
-    } else {
-      throw 'Unknown Overlapable: ${other.runtimeType}';
-    }
-  }
-
   IntRect union(IntRect other) {
     if (other.isEmpty) {
       return this;
