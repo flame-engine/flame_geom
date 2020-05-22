@@ -1,6 +1,6 @@
 name: flame_geom
 description: Complement Flame with APIs for handling shapes and geometric operations.
-version: 0.2.1
+version: 0.2.2
 homepage: https://github.com/flame-engine/flame_geom
 
 environment:

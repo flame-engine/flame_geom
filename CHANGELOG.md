@@ -1,3 +1,6 @@
+## [0.2.2]
+* Fix linting issues
+
 ## [0.2.1]
 * Better code formatting
 

@@ -52,7 +52,7 @@ class _Overlapables {
 
     final normalized = [o1, o2].map(_normalize).toList();
     normalized.sort((a, b) =>
-      _classes.indexOf(a.runtimeType) - _classes.indexOf(b.runtimeType));
+        _classes.indexOf(a.runtimeType) - _classes.indexOf(b.runtimeType));
 
     final no1 = normalized[0];
     final no2 = normalized[1];

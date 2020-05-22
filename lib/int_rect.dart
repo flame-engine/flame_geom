@@ -3,7 +3,6 @@ import 'dart:ui';
 
 import 'package:flame/position.dart';
 
-import 'int_bounds.dart';
 import 'int_position.dart';
 import 'overlapable.dart';
 import 'rectangle.dart';
