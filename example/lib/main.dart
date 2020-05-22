@@ -9,10 +9,16 @@ import 'package:flutter/widgets.dart';
 void main() => runApp(MyGame().widget);
 
 class MyGame extends Game {
-
-  static Paint p1 = Paint()..color = const Color(0xFFFF00FF)..style = PaintingStyle.stroke;
-  static Paint p2 = Paint()..color = const Color(0xFFFFFF00)..style = PaintingStyle.stroke;
-  static Paint p3 = Paint()..color = const Color(0xFF00FFFF)..style = PaintingStyle.stroke..strokeWidth = 4.0;
+  static Paint p1 = Paint()
+    ..color = const Color(0xFFFF00FF)
+    ..style = PaintingStyle.stroke;
+  static Paint p2 = Paint()
+    ..color = const Color(0xFFFFFF00)
+    ..style = PaintingStyle.stroke;
+  static Paint p3 = Paint()
+    ..color = const Color(0xFF00FFFF)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 4.0;
 
   Size size;
 
@@ -23,7 +29,10 @@ class MyGame extends Game {
   MyGame() {
     unitCircle = Circle(Position(10, 30), 100.0);
     rectangle = Rectangle.fromLTWH(-100, -100, 200, 200);
-    points = rectangle.sides().expand((e) => unitCircle.intersectLineSegment(e)).toList();
+    points = rectangle
+        .sides()
+        .expand((e) => unitCircle.intersectLineSegment(e))
+        .toList();
   }
 
   @override
@@ -32,7 +41,8 @@ class MyGame extends Game {
 
     canvas.drawCircle(unitCircle.center.toOffset(), unitCircle.radius, p1);
     canvas.drawRect(rectangle.asRect(), p2);
-    canvas.drawPoints(PointMode.points, points.map((p) => p.toOffset()).toList(), p3);
+    canvas.drawPoints(
+        PointMode.points, points.map((p) => p.toOffset()).toList(), p3);
   }
 
   @override
