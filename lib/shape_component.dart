@@ -7,12 +7,15 @@ import 'package:flame_geom/renderable.dart';
 import 'renderer.dart';
 
 class ShapeComponent extends Component {
-
   Paint paint;
   List<Renderable> renderables = [];
   List<Position> positions = [];
 
-  ShapeComponent(this.paint, { List<Renderable> renderables = const [], List<Position> positions = const [] }) {
+  ShapeComponent(
+    this.paint, {
+    List<Renderable> renderables = const [],
+    List<Position> positions = const [],
+  }) {
     this.renderables.addAll(renderables);
     this.positions.addAll(positions);
   }

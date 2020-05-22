@@ -22,10 +22,15 @@ mixin Overlapable {
 /// Useful for edge cases in methods that return or receive [Overlapable] objects.
 class CertainOverlap with Overlapable {}
 
-
 /// Overlapables can be IntRect, Circle, Rectangle, IntBounds, Bounds
 class _Overlapables {
-  static final List<Type> _classes = [IntRect, IntBounds, Circle, Rectangle, Bounds];
+  static final List<Type> _classes = [
+    IntRect,
+    IntBounds,
+    Circle,
+    Rectangle,
+    Bounds
+  ];
 
   static Overlapable _normalize(Overlapable o) {
     if (o is IntRect) {
@@ -46,8 +51,9 @@ class _Overlapables {
     }
 
     final normalized = [o1, o2].map(_normalize).toList();
-    normalized.sort((a, b) => _classes.indexOf(a.runtimeType) - _classes.indexOf(b.runtimeType));
-    
+    normalized.sort((a, b) =>
+      _classes.indexOf(a.runtimeType) - _classes.indexOf(b.runtimeType));
+
     final no1 = normalized[0];
     final no2 = normalized[1];
 
@@ -62,10 +68,10 @@ class _Overlapables {
     } else if (no1 is Rectangle && no2 is Bounds) {
       return no2.overlapables.any((o) => o.overlaps(no1));
     } else if (no1 is Bounds && no2 is Bounds) {
-      return no1.overlapables.any((o1) => no2.overlapables.any((o2) => o1.overlaps(o2)));
+      return no1.overlapables
+          .any((o1) => no2.overlapables.any((o2) => o1.overlaps(o2)));
     } else {
       throw 'Unknown Overlapable';
     }
-
   }
 }

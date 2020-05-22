@@ -9,7 +9,6 @@ import 'circle.dart';
 import 'int_position.dart';
 
 class Renderer {
-
   Renderer._();
 
   static void renderCircle(Canvas canvas, Circle circle, Paint paint) {
@@ -24,11 +23,23 @@ class Renderer {
     canvas.drawRect(intRect.asRect(), paint);
   }
 
-  static void renderLineSegment(Canvas canvas, LineSegment lineSegment, Paint paint) {
-    canvas.drawLine(lineSegment.p1.toOffset(), lineSegment.p2.toOffset(), paint);
+  static void renderLineSegment(
+    Canvas canvas,
+    LineSegment lineSegment,
+    Paint paint,
+  ) {
+    canvas.drawLine(
+      lineSegment.p1.toOffset(),
+      lineSegment.p2.toOffset(),
+      paint,
+    );
   }
 
-  static void renderIntPosition(Canvas canvas, IntPosition intPosition, Paint paint) {
+  static void renderIntPosition(
+    Canvas canvas,
+    IntPosition intPosition,
+    Paint paint,
+  ) {
     renderPosition(canvas, intPosition.toPosition(), paint);
   }
 
@@ -36,9 +47,17 @@ class Renderer {
     renderPositions(canvas, [position], paint);
   }
 
-  static void renderPositions(Canvas canvas, List<Position> positions, Paint paint) {
+  static void renderPositions(
+    Canvas canvas,
+    List<Position> positions,
+    Paint paint,
+  ) {
     if (positions.isNotEmpty) {
-      canvas.drawPoints(PointMode.points, positions.map((e) => e.toOffset()).toList(), paint);
+      canvas.drawPoints(
+        PointMode.points,
+        positions.map((e) => e.toOffset()).toList(),
+        paint,
+      );
     }
   }
 }

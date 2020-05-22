@@ -11,7 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('two int rects', () {
     final r1 = IntRect.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = IntRect.fromLTWH(0, 1, 2, 1);
     final r3 = IntRect.fromLTWH(4, 4, 1, 1);
 
@@ -20,7 +20,7 @@ void main() {
   });
   test('int rect and circle', () {
     final r1 = IntRect.fromLTWH(0, 0, 1, 2);
-    
+
     final c1 = Circle(Position(3, 3), 1);
     final c2 = Circle(Position(0, 0), 1);
 
@@ -29,7 +29,7 @@ void main() {
   });
   test('int rect and rectangle', () {
     final r1 = IntRect.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = Rectangle.fromLTWH(0, 1, 2, 1);
     final r3 = Rectangle.fromLTWH(4, 4, 1, 1);
 
@@ -38,7 +38,7 @@ void main() {
   });
   test('int rect and int bounds', () {
     final r1 = IntRect.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = IntRect.fromLTWH(0, 1, 2, 1);
     final r3 = IntRect.fromLTWH(4, 4, 1, 1);
     final b = IntBounds([r2, r3]);
@@ -48,11 +48,11 @@ void main() {
   });
   test('int rect and bounds', () {
     final r1 = IntRect.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = Rectangle.fromLTWH(2, 2, 2, 1);
     final c1 = Circle(Position(10, 10), 2);
     final c2 = Circle(Position(2, 3), sqrt(2) + 0.1);
-    
+
     final b1 = Bounds([r2, c1]);
     final b2 = Bounds([r2, c2]);
 
@@ -66,7 +66,7 @@ void main() {
     final c1 = Circle(Position(10, 10), 2);
     final c2 = Circle(Position(2, 3), sqrt(2) + 0.1);
     final c3 = Circle(Position(1, 1), 2);
-    
+
     expect(c1.overlaps(c2), false);
     expect(c2.overlaps(c1), false);
 
@@ -78,7 +78,7 @@ void main() {
   });
   test('circle and rectangle', () {
     final r1 = Rectangle.fromLTWH(0, 0, 1, 2);
-    
+
     final c1 = Circle(Position(3, 3), 1);
     final c2 = Circle(Position(0, 0), 1);
 
@@ -87,7 +87,7 @@ void main() {
   });
   test('circle and int bounds', () {
     final c = Circle(Position(1, 1), 2);
-    
+
     final r1 = IntRect.fromLTWH(0, 1, 2, 1);
     final r2 = IntRect.fromLTWH(4, 4, 1, 1);
     final b = IntBounds([r1, r2]);
@@ -97,7 +97,7 @@ void main() {
   });
   test('circle and bounds', () {
     final c1 = Circle(Position(1, 1), 2);
-    
+
     final r = IntRect.fromLTWH(0, 1, 2, 1);
     final c2 = Circle(Position(4, 4), 1);
     final b = Bounds([r, c2]);
@@ -107,7 +107,7 @@ void main() {
   });
   test('two rectangles', () {
     final r1 = Rectangle.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = Rectangle.fromLTWH(0, 1, 2, 1);
     final r3 = Rectangle.fromLTWH(4, 4, 1, 1);
 
@@ -116,7 +116,7 @@ void main() {
   });
   test('rectangles and int bounds', () {
     final r1 = Rectangle.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = IntRect.fromLTWH(0, 1, 2, 1);
     final r3 = IntRect.fromLTWH(4, 4, 1, 1);
     final b = IntBounds([r2, r3]);
@@ -126,11 +126,11 @@ void main() {
   });
   test('rectangles and bounds', () {
     final r1 = Rectangle.fromLTWH(0, 0, 1, 2);
-    
+
     final r2 = Rectangle.fromLTWH(2, 2, 2, 1);
     final c1 = Circle(Position(10, 10), 2);
     final c2 = Circle(Position(2, 3), sqrt(2) + 0.1);
-    
+
     final b1 = Bounds([r2, c1]);
     final b2 = Bounds([r2, c2]);
 
@@ -144,7 +144,7 @@ void main() {
     final r1 = IntRect.fromLTWH(100, 101, 4, 7);
     final r2 = IntRect.fromLTWH(3, 3, 2, 2);
     final b1 = IntBounds([r1, r2]);
-    
+
     final r3 = IntRect.fromLTWH(0, 1, 2, 1);
     final r4 = IntRect.fromLTWH(4, 4, 1, 1);
     final b2 = IntBounds([r3, r4]);
@@ -156,7 +156,7 @@ void main() {
     final r1 = IntRect.fromLTWH(100, 101, 4, 7);
     final r2 = IntRect.fromLTWH(3, 3, 2, 2);
     final b1 = IntBounds([r1, r2]);
-    
+
     final r3 = Rectangle.fromLTWH(2, 2, 2, 1);
     final c = Circle(Position(2, 3), sqrt(2) + 0.1);
     final b2 = Bounds([r3, c]);
@@ -168,7 +168,7 @@ void main() {
     final r = Rectangle.fromLTWH(2, 2, 2, 1);
     final c1 = Circle(Position(10, 10), 2);
     final c2 = Circle(Position(2, 3), sqrt(2) + 0.1);
-    
+
     final b1 = Bounds([r, c1]);
     final b2 = Bounds([r, c2]);
 

@@ -15,7 +15,8 @@ class Bounds with Overlapable, Renderable {
   Bounds(this.overlapables);
 
   /// Creates this from a single [Overlapable]
-  Bounds.fromOverlapable(Overlapable overlapable) : overlapables = [overlapable];
+  Bounds.fromOverlapable(Overlapable overlapable)
+      : overlapables = [overlapable];
 
   @override
   void render(Canvas c, Paint paint) {
