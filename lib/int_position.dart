@@ -1,10 +1,14 @@
+import 'dart:ui';
+
 import 'package:flame/position.dart';
 
-///
+import 'renderable.dart';
+import 'renderer.dart';
+
 /// This is equivalent to the [Position] class but for Integers.
 ///
 /// Both it's 2D coordinates (x, y) are ints.
-class IntPosition {
+class IntPosition with Renderable {
   static final RegExp _matcher =
       RegExp('IntPosition\\(x\\: (\\-?\\d*), y\\: (\\-?\\d*)\\)');
 
@@ -58,4 +62,9 @@ class IntPosition {
       IntPosition(json['x'] as int, json['y'] as int);
 
   Map<String, dynamic> toJson() => {'x': x, 'y': y};
+
+  @override
+  void render(Canvas c, Paint paint) {
+    Renderer.renderIntPosition(c, this, paint);
+  }
 }

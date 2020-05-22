@@ -1,8 +1,12 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flame/position.dart';
 
 import 'line_segment.dart';
+import 'overlapable.dart';
+import 'renderable.dart';
+import 'renderer.dart';
 
 double _sq(x) => pow(x, 2);
 
@@ -13,7 +17,7 @@ double _sq(x) => pow(x, 2);
 /// The circle can be expressed as the locus of points such as:
 /// (x - center.x)^2 + (y - center.y)^2 <= radius^2
 /// This class uses doubles to represent the coordinates. forrrest
-class Circle {
+class Circle with Renderable, Overlapable {
   /// The center of this circle.
   Position center;
 
@@ -100,8 +104,17 @@ class Circle {
     }
   }
 
+  bool overlapsCircle(Circle other) {
+    return center.distance(other.center) <= (radius + other.radius);
+  }
+
   @override
   String toString() => 'Circle(center: $center, radius: $radius)';
 
   Circle clone() => Circle.fromCircle(this);
+
+  @override
+  void render(Canvas c, Paint paint) {
+    Renderer.renderCircle(c, this, paint);
+  }
 }

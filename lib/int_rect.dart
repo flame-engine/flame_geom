@@ -7,11 +7,13 @@ import 'int_bounds.dart';
 import 'int_position.dart';
 import 'overlapable.dart';
 import 'rectangle.dart';
+import 'renderable.dart';
+import 'renderer.dart';
 
 /// This is equivalent to the [Rectangle] class, but with Integers.
 ///
 /// All of its coordinates (x, y, width and height) are ints.
-class IntRect with Overlapable {
+class IntRect with Overlapable, Renderable {
   int x, y, w, h;
 
   IntRect.fromLTWH(this.x, this.y, this.w, this.h);
@@ -153,4 +155,9 @@ class IntRect with Overlapable {
 
   @override
   String toString() => 'IntRect(x: $x, y: $y, w: $w, h: $h)';
+
+  @override
+  void render(Canvas c, Paint paint) {
+    Renderer.renderIntRect(c, this, paint);
+  }
 }

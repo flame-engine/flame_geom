@@ -1,11 +1,14 @@
+import 'dart:ui';
+
+import 'bounds.dart';
 import 'int_rect.dart';
 import 'overlapable.dart';
+import 'renderable.dart';
 
-///
 /// This is an [Overlapable] composed of an arbitrary union of rects.
 ///
 /// If any of the rects overlaps, this overlaps.
-class IntBounds with Overlapable {
+class IntBounds with Overlapable, Renderable {
   List<IntRect> rects;
 
   /// Creates this with a list of [IntRect].
@@ -16,16 +19,12 @@ class IntBounds with Overlapable {
   /// Creates this from a single [IntRect]
   IntBounds.fromRect(IntRect rect) : rects = [rect];
 
+  Bounds toBounds() {
+    return Bounds(rects);
+  }
+
   @override
-  bool overlaps(Overlapable target) {
-    if (target is IntRect) {
-      return rects.any((r) => r.overlaps(target));
-    } else if (target is IntBounds) {
-      return rects.any((r1) => target.rects.any((r2) => r1.overlaps(r2)));
-    } else if (target is CertainOverlap) {
-      return true;
-    } else {
-      throw 'Unknown Overlapable: ${target.runtimeType}';
-    }
+  void render(Canvas c, Paint paint) {
+    rects.forEach((rect) => rect.render(c, paint));
   }
 }

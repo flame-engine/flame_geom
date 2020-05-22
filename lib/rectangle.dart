@@ -2,11 +2,14 @@ import 'dart:math' as math;
 import 'dart:ui';
 
 import 'package:flame/position.dart';
+import 'package:flame_geom/renderable.dart';
 
 import 'circle.dart';
 import 'int_position.dart';
 import 'int_rect.dart';
 import 'line_segment.dart';
+import 'overlapable.dart';
+import 'renderer.dart';
 
 /// This represents an axis-aligned rectangle in a 2D Euclidian space.
 ///
@@ -16,7 +19,7 @@ import 'line_segment.dart';
 /// It uses doubles to represent the coordinates.
 /// It serves pretty much the same purpose as the [Rect] class from dart:ui, but it has an additional range of methods for geometry operations using the other classes on this package.
 /// You can easily convert it to and from dart's [Rect] class.
-class Rectangle {
+class Rectangle with Overlapable, Renderable {
   /// The coordinates and size of this rectangle, as doubles.
   double x, y, w, h;
 
@@ -208,4 +211,9 @@ class Rectangle {
 
   @override
   String toString() => 'Rectangle(x: $x, y: $y, w: $w, h: $h)';
+
+  @override
+  void render(Canvas c, Paint paint) {
+    Renderer.renderRectangle(c, this, paint);
+  }
 }

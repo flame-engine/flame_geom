@@ -1,13 +1,17 @@
 import 'dart:math' as math;
+import 'dart:ui';
 
 import 'package:flame/position.dart';
+
+import 'renderable.dart';
+import 'renderer.dart';
 
 /// A finite line segment between two points in a 2D Euclidian space.
 ///
 /// It uses the [Position] class to represent the end points (thefore it's a double/real line segment).
 /// It can be also used to represent the infinite line that's an extension to this segment in some contexts.
 /// If you provide two equal points, it will create an empty line, which will cause errors in most methods and operations, so beware.
-class LineSegment {
+class LineSegment with Renderable {
   /// The ends of the line segments.
   ///
   /// These are used to define the segment unequivocally.
@@ -135,4 +139,9 @@ class LineSegment {
 
   @override
   String toString() => 'LineSegment(p1: $p1, p2: $p2)';
+
+  @override
+  void render(Canvas c, Paint paint) {
+    Renderer.renderLineSegment(c, this, paint);
+  }
 }
