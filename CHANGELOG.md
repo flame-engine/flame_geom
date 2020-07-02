@@ -1,3 +1,6 @@
+## [0.2.3]
+* Update to work with newer flame version
+
 ## [0.2.2]
 * Fix linting issues
 
