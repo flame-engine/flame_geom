@@ -1,13 +1,13 @@
 name: flame_geom
 description: Complement Flame with APIs for handling shapes and geometric operations.
-version: 0.2.4
+version: 0.2.5
 homepage: https://github.com/flame-engine/flame_geom
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  flame: ^0.26.0
+  flame: ^0.28.0
   flutter:
     sdk: flutter
 
