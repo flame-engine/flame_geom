@@ -1,3 +1,8 @@
+## [next]
+
+## [0.2.5]
+* Update Flame version
+
 ## [0.2.4]
 * Update to work with newer flame version and fix dependencies issues
 
