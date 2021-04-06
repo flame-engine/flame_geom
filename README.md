@@ -1,3 +1,7 @@
+# Warning: This repo is archived.
+
+On Flame 1.0.0, `flame_geom` is built-in on [Flame](https://github.com/flame-engine/flame). Please ignore this repo/package.
+
 # flame_geom
 
 [![Pub](https://img.shields.io/pub/v/flame_geom.svg?style=popout)](https://pub.dartlang.org/packages/flame_geom) ![Test](https://github.com/flame-engine/flame_geom/workflows/Build/badge.svg?branch=master&event=push) [![Discord](https://img.shields.io/discord/509714518008528896.svg)](https://discord.gg/pxrBmy4)
